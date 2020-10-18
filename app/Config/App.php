@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost/app_gba2/';
+	public $baseURL = 'http://localhost/data-warga-gba/';
 
 	/*
 	|--------------------------------------------------------------------------
