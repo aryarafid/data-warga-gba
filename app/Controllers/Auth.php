@@ -26,7 +26,7 @@ class Auth extends BaseController
 		if ($this->request->getPost()) {
 			//lakukan validasi untuk data yang di post
 			$data = $this->request->getPost();
-			$validate = $this->validation->run($data, 'logcheck');
+			// $validate = $this->validation->run($data, 'logcheck');
 			$errors = $this->validation->getErrors();
 
 			if ($errors) {

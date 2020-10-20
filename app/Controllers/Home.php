@@ -8,7 +8,7 @@ class Home extends BaseController
 {
 	public function __construct()
 	{
-		$session = session();
+		// $session = session();
 	}
 
 	public function index()
