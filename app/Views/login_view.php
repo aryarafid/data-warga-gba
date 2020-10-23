@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     
@@ -31,10 +31,10 @@
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg"><?php echo $session->getflashdata('msg'); ?>
+                <p class="login-box-msg"><?= $session->getflashdata('msg'); ?>
                 </p>
 
-                <form class="login-form" method="post" action="<?php echo base_url('auth/logger') ?>">
+                <form class="login-form" method="post" action="<?= base_url('auth/logger') ?>">
                     <div class="input-group mb-3">
                         <input type="username" class="form-control" placeholder="Username" name="username" required="required">
                         <div class="input-group-append">
@@ -63,7 +63,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-12">
-                        <a href="<?php echo base_url(); ?>">
+                        <a href="<?= base_url(); ?>">
                             <button type="submit" class="btn btn-secondary btn-block">Cancel</button>
                         </a>
                     </div>
@@ -75,11 +75,11 @@
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>/public/plugins/jquery/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/public/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="<?php echo base_url(); ?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="<?php echo base_url(); ?>/public/dist/js/adminlte.min.js"></script>
+    <script src="<?= base_url(); ?>/public/dist/js/adminlte.min.js"></script>
 
 </body>
 

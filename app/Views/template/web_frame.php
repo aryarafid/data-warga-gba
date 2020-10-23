@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title> <?php echo $title; ?> </title>
+    <title> <?= $title; ?> </title>
 
     <!-- DataTables -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/adminlte/plugins/fontawesome-free/css/all.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>/public/adminlte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/adminlte/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -56,11 +56,11 @@
         <!-- Notifications Dropdown Menu -->
         <?php if ($session->masuk == FALSE) { ?>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url() . '/Auth'; ?>"> Login </a>
+            <a class="nav-link" href="<?= base_url() . '/Auth'; ?>"> Login </a>
           </li>
         <?php } elseif ($session->masuk == TRUE) { ?>
           <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url() . '/Auth/logout'; ?>"> Logout </a>
+          <a class="nav-link" href="<?= base_url() . '/Auth/logout'; ?>"> Logout </a>
         </li>
         <?php } ?>
         
@@ -71,8 +71,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-no-expand">
       <!-- Brand Logo -->
-      <a href="<?php echo base_url(); ?>" class="brand-link">
-        <img src="<?php echo base_url(); ?>/public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <a href="<?= base_url(); ?>" class="brand-link">
+        <img src="<?= base_url(); ?>/public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Aplikasi GBA</span>
       </a>
 
@@ -91,10 +91,10 @@
 
               <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                  <img src="<?php echo base_url(); ?>/public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                  <img src="<?= base_url(); ?>/public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                  <a href="#" class="d-block"> <?php echo $session->username; ?> </a>
+                  <a href="#" class="d-block"> <?= $session->username; ?> </a>
                 </div>
               </div>
               <!-- Sidebar Menu -->
@@ -102,7 +102,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column nav-compact nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
                   <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                   <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>" class="nav-link <?php echo ($uri->getSegment(1) == '' ? 'active' : null) ?>">
+                    <a href="<?= base_url(); ?>" class="nav-link <?= ($uri->getSegment(1) == '' ? 'active' : null) ?>">
                       <i class="nav-icon fas fa-tachometer-alt"></i>
                       <p>
                         Dashboard
@@ -111,7 +111,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>/data_kk" class="nav-link <?php echo ($uri->getSegment(1) == 'data_kk' ? 'active' : null) ?>">
+                    <a href="<?= base_url(); ?>/data_kk" class="nav-link <?= ($uri->getSegment(1) == 'data_kk' ? 'active' : null) ?>">
                       <i class="nav-icon fas fa-table"></i>
                       <p>
                         Data Kartu Keluarga
@@ -120,7 +120,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>/data_idv" class="nav-link <?php echo ($uri->getSegment(1) == 'data_idv' ? 'active' : null) ?>">
+                    <a href="<?= base_url(); ?>/data_idv" class="nav-link <?= ($uri->getSegment(1) == 'data_idv' ? 'active' : null) ?>">
                       <i class="nav-icon fas fa-users"></i>
                       <p>
                         Data Penduduk
@@ -129,7 +129,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>/export_kk/pilih_kk" class="nav-link <?php echo ($uri->getSegment(1) == 'export_kk' ? 'active' : null) ?>">
+                    <a href="<?= base_url(); ?>/export_kk/pilih_kk" class="nav-link <?= ($uri->getSegment(1) == 'export_kk' ? 'active' : null) ?>">
                       <i class="nav-icon fas fa-file-download"></i>
                       <p>
                         Export Data KK
@@ -169,7 +169,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark"> <?php echo $heading; ?> </h1>
+              <h1 class="m-0 text-dark"> <?= $heading; ?> </h1>
             </div><!-- /.col -->
 
           </div><!-- /.row -->
@@ -219,34 +219,34 @@
 
   <!-- REQUIRED SCRIPTS -->
   <!-- jQuery -->
-  <script src="<?php echo base_url(); ?>/public/plugins/jquery/jquery.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap -->
-  <script src="<?php echo base_url(); ?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- DataTables -->
-  <script src="<?php echo base_url(); ?>/public/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="<?php echo base_url(); ?>/public/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="<?php echo base_url(); ?>/public/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="<?php echo base_url(); ?>/public/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
   <!-- overlayScrollbars -->
-  <script src="<?php echo base_url(); ?>/public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="<?php echo base_url(); ?>/public/dist/js/adminlte.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/js/adminlte.js"></script>
 
   <!-- OPTIONAL SCRIPTS -->
-  <script src="<?php echo base_url(); ?>/public/dist/js/demo.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/js/demo.js"></script>
 
   <!-- PAGE PLUGINS -->
   <!-- jQuery Mapael -->
-  <script src="<?php echo base_url(); ?>/public/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-  <script src="<?php echo base_url(); ?>/public/plugins/raphael/raphael.min.js"></script>
-  <script src="<?php echo base_url(); ?>/public/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-  <script src="<?php echo base_url(); ?>/public/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/raphael/raphael.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/jquery-mapael/maps/usa_states.min.js"></script>
   <!-- ChartJS -->
-  <script src="<?php echo base_url(); ?>/public/plugins/chart.js/Chart.min.js"></script>
+  <script src="<?= base_url(); ?>/public/plugins/chart.js/Chart.min.js"></script>
 
   <!-- PAGE SCRIPTS -->
-  <script src="<?php echo base_url(); ?>/public/dist/js/pages/dashboard2.js"></script>
+  <script src="<?= base_url(); ?>/public/dist/js/pages/dashboard2.js"></script>
 
   <script>
     $(function() {
