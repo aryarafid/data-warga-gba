@@ -31,7 +31,7 @@ class Data_kk extends BaseController
 		];
 
 		// echo view('template/web_frame', $data);
-		echo view('data_kk/data_kk_dashboard', $data);
+		return view('data_kk/data_kk_dashboard', $data);
 	}
 
 	public function detail($no_kk) //menampilkan detail satu kartu keluarga
@@ -52,7 +52,7 @@ class Data_kk extends BaseController
 
 		// echo view('template/web_frame', $data);
 		// echo ($get_kepala);
-		echo view('data_kk/data_kk_detail_2', $data);
+		return view('data_kk/data_kk_detail_2', $data);
 	}
 
 	public function tambah_kk()
@@ -62,7 +62,7 @@ class Data_kk extends BaseController
 			'heading' => 'Tambah Data Kartu Keluarga',
 		];
 
-		echo view('data_kk/input_data_kk', $data);
+		return view('data_kk/input_data_kk', $data);
 	}
 
 	public function tambah_kk_aksi()
@@ -121,7 +121,7 @@ class Data_kk extends BaseController
 
 		// echo view('template/web_frame', $data);
 		// echo ($get_kepala);
-		echo view('data_kk/edit_data_kk', $data);
+		return view('data_kk/edit_data_kk', $data);
 	}
 
 	public function edit_kk_aksi()

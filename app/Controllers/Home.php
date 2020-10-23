@@ -36,7 +36,7 @@ class Home extends BaseController
 
 		// echo $this->session->username;
 
-		echo view('dashboard', $data);
+		return view('dashboard', $data);
 	}
 
 	//--------------------------------------------------------------------

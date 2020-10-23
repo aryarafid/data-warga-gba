@@ -45,7 +45,7 @@ class Export_kk extends BaseController
             'get_kepala' => $get_kepala,
         ];
 
-        echo view('data_kk/x_data_kk_detail', $data);
+        return view('data_kk/x_data_kk_detail', $data);
     }
 
     public function pilih_kk() //aka PICKER
@@ -62,7 +62,7 @@ class Export_kk extends BaseController
         ];
 
         // echo view('template/web_frame', $data);
-        echo view('export_kk/ex_pilih_kk', $data);
+        return view('export_kk/ex_pilih_kk', $data);
     }
 
     public function excell()
@@ -72,7 +72,7 @@ class Export_kk extends BaseController
         $no_kk = $uri->getSegment(3);
 
         $data_kk = $this->model_kk->find($no_kk);
-        $data_idv = $this->model_indv->find($no_kk);
+        // $data_idv = $this->model_indv->find($no_kk);
         $get_kelga = $this->model_indv->get_kelg(['no_kk' => $no_kk]); //array
         // $get_kelg = $this->model_indv->get_keluarga(['no_kk' => $no_kk]); //obj
         $get_kpl = $this->model_indv->get_kpl($no_kk);

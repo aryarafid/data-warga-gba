@@ -30,7 +30,7 @@ class Data_idv extends BaseController
 		];
 
 		// echo view('template/web_frame', $data);
-		echo view('data_idv/data_idv_dashboard', $data);
+		return view('data_idv/data_idv_dashboard', $data);
 	}
 
 	public function detail($nik) //menampilkan detail satu data
@@ -51,7 +51,7 @@ class Data_idv extends BaseController
 
 		// echo view('template/web_frame', $data);
 		// echo ($get_kepala);
-		echo view('data_idv/data_idv_detail', $data);
+		return view('data_idv/data_idv_detail', $data);
 	}
 
 
@@ -62,7 +62,7 @@ class Data_idv extends BaseController
 			'heading' => 'Tambah Data Penduduk',
 		];
 
-		echo view('data_idv/input_data_idv', $data);
+		return view('data_idv/input_data_idv', $data);
 	}
 
 	public function tambah_idv_aksi()
@@ -87,7 +87,7 @@ class Data_idv extends BaseController
 		);
 
 		$this->model_indv->save_idv($data);
-        echo "<script>alert('Data berhasil ditambahkan');window.location = '".base_url() . '/data_idv'."';</script>";
+        return "<script>alert('Data berhasil ditambahkan');window.location = '".base_url() . '/data_idv'."';</script>";
 		// return redirect()->to(base_url() . '/data_idv');
 	}
 
@@ -109,7 +109,7 @@ class Data_idv extends BaseController
 
 		// echo view('template/web_frame', $data);
 		// echo ($get_kepala);
-		echo view('data_idv/edit_data_idv', $data);
+		return view('data_idv/edit_data_idv', $data);
 	}
 
 	public function edit_idv_aksi()

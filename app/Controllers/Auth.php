@@ -18,14 +18,14 @@ class Auth extends BaseController
 
 	public function index()
 	{
-		echo view('login_view');
+		return view('login_view');
 	}
 
 	public function logger()
 	{
 		if ($this->request->getPost()) {
 			//lakukan validasi untuk data yang di post
-			$data = $this->request->getPost();
+			// $data = $this->request->getPost();
 			// $validate = $this->validation->run($data, 'logcheck');
 			$errors = $this->validation->getErrors();
 
@@ -74,7 +74,7 @@ class Auth extends BaseController
 
 
 			if (!$this->validate($rules)) {
-				echo view('login_view', [
+				return view('login_view', [
 					'validation' => $this->validator
 				]);
 			} else {
